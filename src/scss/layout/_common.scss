@@ -1,0 +1,243 @@
+/* common layout */
+.skip-navigation {
+    position:absolute;
+    z-index:9999;
+    a {
+        display:block;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+    }
+}
+
+.contents {
+    @for $i from 1 through 9 {
+        &.cate0#{$i} {
+            .page-title {
+                background-image:url('/images/bg/bg-subvisual0#{$i}.jpg');
+            }
+        }
+    }
+    .page-title {
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        height:350px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+        z-index:10;
+        @include tablet {
+            height:260px;
+        }
+        @include mobile {
+            height:200px;
+        }
+        h2.title {
+            flex:1;
+            padding-top:246px;
+            color:#fff;
+            text-align:center;
+            font-size:34px;
+            font-weight:500;
+            @include tablet {
+                padding-top:125px;
+                font-size:30px;
+            }
+            @include mobile {
+                padding-top:105px;
+                font-size:24px;
+            }
+        }
+    }
+    .sub-depth-wrap {
+        position:relative;
+        height:60px;
+        z-index:100;
+        @include tablet {
+            height:45px;
+        }
+        &::before {
+            content:' ';
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            height:1px;
+            background:$border;
+            z-index:-1;
+        }
+        .area {
+            display:flex;
+            width:100%;
+            max-width:1280px;
+            margin:0 auto;
+            .home {
+                display:block;
+                width:60px;
+                height:60px;
+                background:$point url('/images/icon/icon-home.png') center no-repeat;
+                @include tablet {
+                    width:45px;
+                    min-width:45px;
+                    height:45px;
+                    background-size:20px;
+                }
+            }
+            .dropdown-menu {
+                position:relative;
+                width:220px;
+                border-right:1px solid $border;
+                @include mobile {
+                    flex:1;
+                    &:last-child {
+                        border-right:none;
+                    }
+                }
+                &.open {
+                    .btn-toggle::after {
+                        transform:rotate(135deg);
+                        margin-top:-3px;
+                    }
+                    ul.lists {
+                        display:block;
+                    }
+                }
+                .btn-toggle {
+                    position:relative;
+                    display:block;
+                    width:100%;
+                    height:60px;
+                    padding:0 40px 0 20px;
+                    color:#333;
+                    font-size:16px;
+                    line-height:60px;
+                    @include tablet {
+                        height:45px;
+                        font-size:14px;
+                        line-height:45px;
+                    }
+                    @include mobile {
+                        padding:0 30px 0 10px;
+                    }
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        right:23px;
+                        width:10px;
+                        height:10px;
+                        margin-top:-7px;
+                        border:1px solid #888;
+                        border-top:none;
+                        border-right:none;
+                        transform:rotate(-45deg);
+                        transition:all 0.1s ease-in-out;
+                        @include mobile {
+                            right:13px;
+                        }
+                    }
+                }
+                ul.lists {
+                    display:none;
+                    position:absolute;
+                    top:100%;
+                    left:0;
+                    right:0;
+                    li {
+                        background:#eee;
+                        a {
+                            display:block;
+                            height:45px;
+                            padding:0 20px;
+                            color:#666;
+                            font-size:16px;
+                            line-height:45px;
+                            @include tablet {
+                                height:40px;
+                                font-size:14px;
+                                line-height:40px;
+                            }
+                            @include mobile {
+                                height:35px;
+                                padding:0 10px;
+                                line-height:35px;
+                            }
+                            &:hover {
+                                color:$point;
+                            }
+                            &.active {
+                                background:rgba($point, 0.7);
+                                color:#fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h3.sub-page-title {
+        position:relative;
+        margin-top:70px;
+        margin-bottom:60px;
+        padding-bottom:30px;
+        font-size:32px;
+        font-weight:500;
+        text-align:center;
+        &::after {
+            content:' ';
+            position:absolute;
+            left:50%;
+            bottom:0;
+            width:80px;
+            height:2px;
+            margin-left:-40px;
+            background:$point;
+        }
+        @include tablet {
+            margin-bottom:40px;
+            font-size:28px;
+        }
+        @include mobile {
+            margin-top:50px;
+            margin-bottom:30px;
+            padding-bottom:20px;
+            font-size:22px;
+            &::after {
+                width:60px;
+                margin-left:-30px;
+            }
+        }
+    }
+    .contents-area {
+        @include contArea;
+        padding-bottom:100px;
+        @include mobile {
+            padding-bottom:60px;
+        }
+    }
+}
+
+/* dim */
+.common-dim {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(#000, 0.5);
+    z-index:999;
+}
+
+.nodata {
+    display:block;
+    padding:100px 0;
+    text-align:center;
+    color:$gray;
+    font-size:16px;
+    @include mobile {
+        padding:60px 0;
+        font-size:14px;
+    }
+}

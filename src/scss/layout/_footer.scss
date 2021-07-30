@@ -1,0 +1,108 @@
+/* footer */
+footer {
+    border-top:1px solid $border;
+    padding:40px 0;
+    @include mobile {
+        padding:30px 0;
+    }
+    .foot-cont {
+        display:flex;
+        @include contArea;
+        @include mobile {
+            flex-direction:column;
+        }
+        .left {
+            padding:20px 0;
+            @include tablet {
+                padding:0;
+            }
+            .link-lists {
+                margin-bottom:30px;
+                font-size:0;
+                @include mobile {
+                    margin-bottom:20px;
+                }
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    &::before {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:middle;
+                        width:1px;
+                        height:10px;
+                        margin:0 20px;
+                        background:#999;
+                    }
+                    &:first-child::before {
+                        display:none;
+                    }
+                    a {
+                        display:inline-block;
+                        vertical-align:middle;
+                        font-size:16px;
+                        @include mobile {
+                            font-size:13px;
+                        }
+                    }
+                }
+            }
+            .comp-infos {
+                li {
+                    display:flex;
+                    margin-top:13px;
+                    color:#777;
+                    font-size:15px;
+                    word-break:keep-all;
+                    @include mobile {
+                        margin-top:6px;
+                        font-size:13px;
+                        line-height:17px;
+                    }
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    .tit {
+                        margin-right:18px;
+                        white-space:nowrap;
+                    }
+                    .cont {
+                        span {
+                            margin-right:30px;
+                            @include mobile {
+                                margin-right:10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright {
+                margin-top:30px;
+                color:#999;
+                font-size:15px;
+                @include mobile {
+                    margin-top:20px;
+                    font-size:12px;
+                }
+            }
+        }
+        .right {
+            width:auto;
+            margin-left:auto;
+            @include tablet {
+                .logo {
+                    img {
+                        height:33px;
+                    }
+                }
+            }
+            @include mobile {
+                order:-1;
+                width:100%;
+                border-bottom:1px solid $border;
+                margin-bottom:20px;
+                padding-bottom:15px;
+            }
+        }
+    }
+}
