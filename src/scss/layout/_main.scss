@@ -15,7 +15,7 @@
                 display:block;
                 margin-bottom:20px;
                 font-size:18px;
-                color:$point2;
+                color:rgba(225, 176, 22, 1);
                 letter-spacing:3px;
             }
         }
@@ -36,7 +36,7 @@
         position:relative;
         .swiper-slide {
             position:relative;
-            @include calcs(padding-top, 980px, 1920px);
+            padding-top:947px;
             background-size:cover;
             background-position:center;
             background-repeat:no-repeat;
@@ -312,7 +312,6 @@
                     white-space:nowrap;
                     text-align:center;
                     box-shadow:$boxshadow;
-                    transition:all 0.2s ease-in-out;
                     @include mobile {
                         padding:20px 2px;
                         font-size:16px;

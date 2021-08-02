@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="contents cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '02',
+                title : 'CI소개'
+            })
+
+            <div class="contents-area">
+                <div class="sub0102">
+                    <h4 class="tit">원스톱 컨설팅으로 미래 사업을 지향하다</h4>
+                    <p class="desc">
+                        ㈜키포유는 원스톱 컨설팅 시스템을 기반으로<br>
+                        중소기업들의 한 발 빠른 능동적인 대응과<br>
+                        전문화된 컨설팅을 수행하게 만드는, 중소기업의 손과 발이 되는<br>
+                        진정한 컨설팅회사가 될 것입니다. 
+                    </p>
+                    <div class="ci-box">
+                        <img src="/images/img/img-sub0102.jpg" alt="">
+                    </div>
+                    <div class="colorsystem">
+                        <p class="tit">Color System</p>
+                        <p class="desc">안정적이고 신뢰감있는 이미지를 표현하며,<br>골드 컬러를 통해 보다 진취적이고 높은 가치의 결과를 창출하는 이미지를 보여주고 있습니다.</p>
+                        <ul class="color-lists">
+                            <li>
+                                <div class="inner color1">
+                                    <p class="color-name">DEEP GOLD</p>
+                                    <dl>
+                                        <dt>RGB</dt>
+                                        <dd>137 / 89 / 62</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>CMYK</dt>
+                                        <dd>36 / 63 / 77 / 25</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner color2">
+                                    <p class="color-name">GOLD</p>
+                                    <dl>
+                                        <dt>RGB</dt>
+                                        <dd>225 / 176 / 22</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>CMYK</dt>
+                                        <dd>13 / 30 / 100 / 0</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="inner color3">
+                                    <p class="color-name">DEEP BROWN</p>
+                                    <dl>
+                                        <dt>RGB</dt>
+                                        <dd>36 / 27 / 20</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>CMYK</dt>
+                                        <dd>63 / 67 / 72 / 78</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="down-btns">
+                            <li>
+                                <a href="" class="btn btn-border-basic"><span>AI DOWNLOAD</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="btn btn-border-basic"><span>JPG DOWNLOAD</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

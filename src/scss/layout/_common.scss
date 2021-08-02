@@ -11,6 +11,114 @@
     }
 }
 
+html {
+    overflow-x:hidden;
+}
+
+.quick-menu {
+    position:absolute;
+    top:460px;
+    left:50%;
+    margin-left:670px;
+    padding-top:22px;
+    z-index:400;
+    &.main {
+        top:997px;
+    }
+    @include tablet {
+        display:none !important;
+    }
+    &::before {
+        content:' ';
+        position:absolute;
+        top:0;
+        left:50%;
+        width:44px;
+        height:44px;
+        margin-left:-22px;
+        border-radius:50%;
+        background:#333 url('/images/icon/icon-quick.png') center no-repeat;
+        z-index:410;
+    }
+    .body {
+        position:relative;
+        width:156px;
+        padding:35px 10px 45px;
+        border:1px solid $border;
+        border-radius:10px;
+        background:$disabled;
+        .tit {
+            margin-bottom:10px;
+            font-size:18px;
+            font-weight:700;
+            text-align:center;
+        }
+        ul.links {
+            li {
+                margin-top:4px;
+                a {
+                    display:block;
+                    padding:7px;
+                    border-radius:4px;
+                    background:#dcd5d0;
+                    text-align:center;
+                    color:$point;
+                    font-size:14px;
+                    line-height:18px;
+                    font-weight:500;
+                    word-break:keep-all;
+                }
+            }
+        }
+        .totop {
+            position:absolute;
+            bottom:-20px;
+            left:50%;
+            width:40px;
+            height:40px;
+            margin-left:-20px;
+            border:1px solid $border;
+            border-radius:4px;
+            background:#fff;
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:8px;
+                height:8px;
+                margin-left:-4px;
+                margin-top:-1px;
+                border:2px solid #333;
+                border-top:none;
+                border-right:none;
+                transform:rotate(135deg);
+            }
+        }
+    }
+    .foot {
+        margin-top:28px;
+        border:1px solid $border;
+        border-radius:10px;
+        background:$disabled;
+        overflow:hidden;
+        .tit {
+            background:#333;
+            text-align:center;
+            color:#fff;
+            font-size:18px;
+            font-weight:700;
+            line-height:45px;
+        }
+        .call {
+            text-align:center;
+            font-size:18px;
+            font-weight:700;
+            line-height:45px;
+        }
+    }
+}
+
 .contents {
     @for $i from 1 through 9 {
         &.cate0#{$i} {

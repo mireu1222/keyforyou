@@ -40,8 +40,174 @@
             }
         }
     }
-    // 비전
-    .vision-wrap {
+    // ci소개
+    .sub0102 {
+        text-align:center;
+        > .tit {
+            position:relative;
+            display:inline-block;
+            padding:0 100px;
+            color:$point;
+            @include font-xl;
+            text-align:center;
+            word-break:keep-all;
+            @include mobile {
+                padding:0 40px;
+            }
+            &::before,
+            &::after {
+                content:' ';
+                position:absolute;
+                width:80px;
+                height:58px;
+                background:url('/images/icon/icon-quote.png') center no-repeat;
+                background-size:100%;
+                @include mobile {
+                    width:40px;
+                    height:29px;
+                }
+            }
+            &::before {
+                top:-23px;
+                left:0;
+                @include mobile {
+                    top:-10px;
+                }
+            }
+            &::after {
+                right:0;
+                bottom:-26px;
+                transform:rotate(180deg);
+                @include mobile {
+                    bottom:-10px;
+                }
+            }
+        }
+        > .desc {
+            margin-top:30px;
+            color:#666;
+            @include font-md;
+            word-break:keep-all;
+            @include mobile {
+                margin-top:20px;
+                br {
+                    display:none;
+                }
+            }
+        }
+        .ci-box {
+            margin:60px 0 80px;
+            border:1px solid $border;
+            @include mobile {
+                margin:30px 0 40px;
+            }
+        }
+        .colorsystem {
+            .tit {
+                @include font-title;
+                font-weight:700;
+            }
+            .desc {
+                margin-top:10px;
+                color:#666;
+                @include font;
+            }
+        }
+        .color-lists {
+            display:flex;
+            width:100%;
+            max-width:1130px;
+            margin:45px auto 0;
+            @include mobile {
+                display:block;
+                margin-top:20px;
+            }
+            > li {
+                flex:1;
+                margin-left:30px;
+                @include tablet {
+                    margin-left:10px;
+                }
+                @include mobile {
+                    margin-left:0;
+                    margin-top:10px;
+                }
+                &:first-child {
+                    margin-left:0;
+                    margin-top:0;
+                }
+                .inner {
+                    height:100%;
+                    padding:25px 30px;
+                    text-align:left;
+                    @include tablet {
+                        padding:20px 15px;
+                    }
+                    &.color1 {
+                        background:#89593e;
+                    }
+                    &.color2 {
+                        background:#e1b016;
+                    }
+                    &.color3 {
+                        background:#241b14;
+                    }
+                    .color-name {
+                        margin-bottom:20px;
+                        color:#fff;
+                        font-size:20px;
+                        font-weight:500;
+                        @include mobile {
+                            font-size:18px;
+                        }
+                    }
+                    dl {
+                        @include font;
+                        color:#fff;
+                        dt {
+                            float:left;
+                            width:65px;
+                        }
+                        dd {
+                            margin-left:65px;
+                            opacity:0.5;
+                        }
+                    }
+                }
+            }
+        }
+        .down-btns {
+            margin-top:60px;
+            font-size:0;
+            @include mobile {
+                margin-top:40px;
+            }
+            li {
+                display:inline-block;
+                vertical-align:top;
+                margin-left:40px;
+                @include mobile {
+                    width:calc((100% - 10px) / 2);
+                    margin-left:10px;
+                }
+                &:first-child {
+                    margin-left:0;
+                }
+                a {
+                    display:block;
+                    width:180px;
+                    padding:0 15px;
+                    text-align:left;
+                    background:url('/images/icon/icon-down.png') right 15px center no-repeat;
+                    @include mobile {
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+    // 회사이념
+    .sub0103 {
         max-width:882px;
         margin:0 auto;
         ul {
@@ -82,7 +248,7 @@
                         color:$point;
                         font-size:18px;
                         line-height:1;
-                        font-weight:900;
+                        font-weight:700;
                     }
                 }
                 .desc {
@@ -100,34 +266,46 @@
                         position:absolute;
                         top:50%;
                         left:50%;
-                        font-size:16px;
-                        line-height:24px;
-                        font-weight:700;
+                        @include font-lg;
+                        font-weight:500;
                         transform:translate(-50%, -50%) skew(-0.05deg);
                         white-space:nowrap;
                         &::before {
                             content:' ';
                             display:block;
-                            margin:0 auto 20px;
-                            width:65px;
-                            height:65px;
+                            margin:0 auto 30px;
+                            width:64px;
+                            height:64px;
                             background-size:100%;
                             background-repeat:no-repeat;
                         }
                         @for $i from 1 through 3 {
                             &.icon0#{$i}::before {
-                                background-image:url('/images/icon/icon-sub0102-0#{$i}.png');
+                                background-image:url('/images/icon/icon-sub0103-#{$i}.png');
                             }
                         }
                     }
                 }
             }
         }
+        .text {
+            margin-top:60px;
+            color:#666;
+            text-align:center;
+            @include font-lg;
+            word-break:keep-all;
+            @include mobile {
+                margin-top:40px;
+                br {
+                    display:none;
+                }
+            }
+        }
     }
-    // 연혁
+    // 회사연혁
     .history-container {
         .history-wrap {
-            @include pc {
+            @include exmob {
                 section {
                     position:relative;
                     padding-top:40px;
@@ -140,18 +318,6 @@
                     }
                     &:last-child {
                         padding-bottom:0;
-                        .month-lists {
-                            position:relative;
-                            &::before {
-                                content:' ';
-                                position:absolute;
-                                right:-1px;
-                                top:10px;
-                                bottom:0;
-                                width:3px;
-                                background:#fff;
-                            }
-                        }
                     }
                     &:nth-child(even) {
                         h5 span {
@@ -160,7 +326,7 @@
                         .month-lists {
                             margin-right:auto;
                             li {
-                                @include calcs(padding-right, 150px, 640px);
+                                @include calcs(padding-right, 96px, 640px);
                                 text-align:right;
                                 span.month {
                                     @include calcs(right, 100px, 640px);
@@ -187,7 +353,7 @@
                         .month-lists {
                             margin-left:auto;
                             li {
-                                @include calcs(padding-left, 150px, 640px);
+                                @include calcs(padding-left, 96px, 640px);
                                 span.month {
                                     @include calcs(left, 100px, 640px);
                                     color:$point;
@@ -297,7 +463,7 @@
                         font-size:26px;
                         line-height:1;
                         font-weight:900;
-                        color:$point2;
+                        color:$point;
                         letter-spacing:-1px;
                     }
                     .month-lists {
@@ -372,109 +538,351 @@
             }
         }
     }
-    // ci/bi
-    .ci-bi-wrap {
-        .box {
-            display:flex;
-            justify-content:space-between;
-            min-height:200px;
-            border:1px solid $border;
-            margin-top:80px;
-            padding:45px 60px;
-            align-items:center;
-            @include mobile {
-                min-height:auto;
-                margin-top:50px;
-                padding:30px 20px;
-            }
-            &:first-child {
-                margin-top:0;
-            }
-            img {
-                margin:0 auto;
-            }
-            @include mobile {
-                > img {
-                    max-width:220px;
-                }       
-            }
-            li {
-                width:48%;
-                text-align:center;
-            }
-        }
-        h5 {
-            margin-top:25px;
-            @include font-title;
-            font-weight:900;
-            @include mobile {
-                margin-top:15px;
-            }
-        }
-        .desc {
-            margin-top:10px;
-            @include font;
-            word-break:keep-all;
-        }
-        .color-list {
-            display:flex;
-            justify-content:space-between;
-            margin-top:10px;
-            @include mobile {
-                display:block;
-            }
-            li {
-                width:48%;
-                max-width:550px;
+    // 조직도
+    .sub0105 {
+        ul.org-lists {
+            text-align:center;
+            > li {
+                position:relative;
+                padding-bottom:50px;
                 @include mobile {
-                    width:100%;
-                    max-width:100%;
-                    margin-top:10px;
+                    padding-bottom:20px;
+                }
+                &::after {
+                    content:' ';
+                    position:absolute;
+                    bottom:0;
+                    left:50%;
+                    width:1px;
+                    height:50px;
+                    background:$border;
+                    z-index:-1;
+                }
+                &:last-child {
+                    padding-bottom:0;
+                    &::after {
+                        display:none;
+                    }
+                }
+                span {
+                    display:block;
+                    width:186px;
+                    height:55px;
+                    margin:0 auto; 
+                    color:#fff;
+                    font-size:18px;
+                    line-height:55px;
+                    font-weight:500;
+                    @include mobile {
+                        width:150px;
+                        height:40px;
+                        font-size:16px;
+                        line-height:40px;
+                    }
+                    &.c1 {
+                        background:#89593e;
+                    }
+                    &.c2 {
+                        background:#6b564b;
+                    }
+                }
+                &.type2 {
+                    @include mobile {
+                        padding-bottom:50px;
+                    }
+                    &::before {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        width:220px;
+                        height:1px;
+                        margin-top:27px;
+                        background:$border;
+                        @include tablet {
+                            width:auto;
+                            right:0;
+                        }
+                        @include mobile {
+                            margin-top:20px;
+                        }
+                    }
+                    span.absolute {
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        margin-left:220px;
+                        @include tablet {
+                            left:auto;
+                            right:0;
+                            margin-left:0;
+                        }
+                    }
                 }
             }
-            dl {
-                dt {
-                    @include font-lg;
-                    font-weight:700;
+        }
+        .team-lists {
+            position:relative;
+            display:flex;
+            justify-content:space-between;
+            padding-top:36px;
+            @include mobile {
+                flex-wrap:wrap;
+                padding-top:20px;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                height:1px;
+                background:$border;
+            }
+            > li {
+                display:flex;
+                flex-direction:column;
+                position:relative;
+                width:236px;
+                @include tablet {
+                    width:calc((100% - 30px) / 4);
                 }
-                dd {
-                    display:flex;
-                    justify-content:space-between;
+                @include mobile {
+                    width:49%;
+                    &:nth-child(2) ~ li {
+                        margin-top:20px;
+                    }
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:-36px;
+                    left:50%;
+                    bottom:0;
+                    width:1px;
+                    background:$border;
+                    z-index:-1;
+                    @include mobile {
+                        top:-20px;
+                    }
+                }
+                &:first-child {
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:-36px;
+                        left:0;
+                        width:50%;
+                        height:3px;
+                        background:#fff;
+                        @include mobile {
+                            top:-20px;
+                        }
+                    }
+                }
+                &:last-child {
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:-36px;
+                        right:-1px;
+                        width:50%;
+                        height:3px;
+                        background:#fff;
+                        @include mobile {
+                            display:none;
+                        }
+                    }
+                }
+                @include mobile {
+                    &:nth-child(2)::after {
+                        content:' ';
+                        position:absolute;
+                        top:-20px;
+                        right:-1px;
+                        width:50%;
+                        height:3px;
+                        background:#fff;
+                    }
+                }
+                .tit {
+                    padding:19px 5px;
+                    background:#c6a840;
+                    font-size:18px;
+                    line-height:22px;
+                    color:#fff;
+                    text-align:center;
+                    font-weight:500;
+                    @include mobile {
+                        padding:0 5px;
+                        font-size:16px;
+                        line-height:40px;
+                    }
+                }
+                ul.lists {
+                    height:100%;
                     margin-top:10px;
-                    font-size:0;
+                    padding:20px 10px 30px;
+                    background:#fff;
+                    border:1px solid $border;
                     @include mobile {
                         margin-top:5px;
+                        padding:15px 10px 20px;
                     }
-                    .chip {
-                        position:relative;
-                        height:120px;
-                        @include calcs(width, 250px, 550px);
-                        padding:0 10px;
-                        color:$white;
+                    li {
+                        margin-top:15px;
+                        color:#666;
                         @include font;
-                        font-weight:700;
+                        text-align:center;
+                        word-break:keep-all;
+                        @include mobile {
+                            margin-top:10px;
+                        }
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+        }
+        .coop-box {
+            margin-top:60px;
+            padding:40px 50px;
+            background:$disabled;
+            @include tablet {
+                margin-top:40px;
+                padding:30px 20px;
+            }
+            .tit {
+                margin-bottom:20px;
+                color:$point;
+                font-size:24px;
+                font-weight:500;
+                @include mobile {
+                    font-size:18px;
+                }
+            }
+            .coop-lists {
+                display:flex;
+                @include mobile {
+                    display:block;
+                }
+                > li {
+                    flex:1;
+                    margin-left:15px;
+                    background:#fff;
+                    border:1px solid $border;
+                    text-align:center;
+                    @include mobile {
+                        margin-left:0;
+                        margin-top:10px;
+                    }
+                    &:first-child {
+                        margin-left:0;
+                        margin-top:0;
+                    }
+                    p.cate {
+                        margin:-1px -1px 0;
+                        background:#7e7e7e;
+                        color:#fff;
+                        font-size:18px;
+                        font-weight:500;
+                        line-height:60px;
                         text-align:center;
                         @include mobile {
-                            width:calc((100% - 10px) / 2);
+                            font-size:16px;
+                            line-height:40px;
                         }
-                        span {
-                            position:absolute;
-                            top:50%;
-                            left:10px;
-                            right:10px;
-                            transform:translateY(-50%);
+                    }
+                    ul {
+                        padding:25px 0;
+                        @include mobile {
+                            padding:15px 0;
                         }
-                        &.main01 {
-                            background:$point;
+                        li {
+                            margin-top:10px;
+                            color:#666;
+                            @include font;
+                            word-break:keep-all;
+                            &:first-child {
+                                margin-top:0;
+                            }
                         }
-                        &.main02 {
-                            background:$point2;
+                    }
+                }
+            }
+        }
+    }
+    // 컨설팅파트너
+    .sub0106 {
+        > .tit {
+            margin-bottom:50px;
+            @include font-xl;
+            font-weight:400;
+            text-align:center;
+            em {
+                display:block;
+                font-weight:700;
+            }
+        }
+        .partners-wrap {
+            overflow:hidden;
+            ul.lists {
+                display:flex;
+                flex-wrap:wrap;
+                margin-top:-100px;
+                @include tablet {
+                    margin-top:-60px;
+                }
+                @include mobile {
+                    margin-top:0;
+                }
+                > li {
+                    width:350px;
+                    margin-top:100px;
+                    margin-left:calc((100% - 1050px) / 2);
+                    @include tablet {
+                        width:calc((100% - 30px) / 3);
+                        margin-top:60px;
+                        margin-left:15px;
+                    }
+                    &:nth-child(3n+1) {
+                        margin-left:0;
+                    }
+                    @include mobile {
+                        width:100%;
+                        margin-left:0;
+                        margin-top:40px;
+                        &:first-child {
+                            margin-top:0;
                         }
-                        &.sub01 {
-                            background:#808285;
+                    }
+                }
+                .inner {
+                    .thumb {
+                        display:block;
+                        margin-bottom:20px;
+                    }
+                    .name {
+                        font-size:28px;
+                        font-weight:700;
+                        @include mobile {
+                            font-size:20px;
                         }
-                        &.sub02 {
-                            background:#bcbec0;
+                    }
+                    .tit {
+                        margin-top:25px;
+                        font-size:18px;
+                        font-weight:500;
+                        @include mobile {
+                            margin-top:15px;
+                            font-size:16px;
+                        }
+                    }
+                    .bullet-list {
+                        margin-top:10px;
+                        li {
+                            color:#888;
                         }
                     }
                 }
@@ -486,40 +894,70 @@
         .root_daum_roughmap {
             width:100%;
             .wrap_map {
-                height:380px;
+                height:590px;
                 @include mobile {
                     height:300px;
                 }
+            }
+            .map_border {
+                display:none !important;
             }
             .wrap_controllers {
                 display:none;
             }
         }
         .comp-info {
-            border-top:1px solid $basic;
-            dl {
-                border-bottom:1px solid $border;
-                @include clearfix;
-                dt {
-                    float:left;
-                    @include calcs(width, 300px, 1280px);
-                    padding:28px 0;
-                    border-right:1px solid $border;
-                    @include font;
-                    font-weight:700;
-                    text-align:center;
-                    @include mobile {
-                        padding:12px 0;
-                    }
+            .tit {
+                font-size:24px;
+                font-weight:500;
+                @include mobile {
+                    font-size:20px;
                 }
-                dd {
-                    @include calcs(margin-left, 300px, 1280px);
-                    padding:28px 60px;
-                    @include font;
-                    color:$cont;
+            }
+            .addr {
+                margin-top:5px;
+                @include font-md;
+            }
+            ul.contact {
+                margin-bottom:35px;
+                margin-top:20px;
+                padding-top:30px;
+                border-top:1px solid $border;
+                font-size:0;
+                @include mobile {
+                    margin-bottom:20px;
+                    margin-top:10px;
+                    padding-top:20px;
+                }
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    margin-right:80px;
+                    font-size:24px;
+                    line-height:36px;
                     font-weight:700;
                     @include mobile {
-                        padding:12px;
+                        margin-right:20px;
+                        font-size:20px;
+                    }
+                    &:last-child {
+                        margin-left:0;
+                    }
+                    span {
+                        display:inline-block;
+                        vertical-align:top;
+                        width:36px;
+                        height:36px;
+                        margin-right:4px;
+                        border-radius:50%;
+                        text-align:center;
+                        color:#fff;
+                    }
+                    &:first-child span {
+                        background:$point;
+                    }
+                    &:nth-child(2) span {
+                        background:$point2;
                     }
                 }
             }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- contents -->
+        <div id="container" class="contents cate01">
+            @@include('./layout/page-title.html', {
+                cate01 : '03',
+                title : '회사이념'
+            })
+
+            <div class="contents-area">
+                <div class="sub0103">
+                    <ul>
+                        <li>
+                            <p class="tit"><span>VALUES 01</span></p>
+                            <div class="desc">
+                                <span class="icon01">중소기업의 힘</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="tit"><span>VALUES 02</span></p>
+                            <div class="desc">
+                                <span class="icon02">중소기업의 꿈</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="tit"><span>VALUES 03</span></p>
+                            <div class="desc">
+                                <span class="icon03">중소기업의 희망</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="text">
+                        중소기업의 미래경영을 최우선 목표로 두어<br>
+                        중소기업의 전문화, 정보화, 능동적인 변화를 돕기 위한 원스톱 컨설팅 및 이익 대변을 위한 자문단 구성으로,<br>
+                        중소기업 미래경영의 등대가 되고자 합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- // contents -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>
