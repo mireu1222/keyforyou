@@ -1,0 +1,17 @@
+<div class="service-info">
+    <h4 class="tit">@@title</h4>
+    @@if(context.desc){
+        <p class="desc">@@desc</p>
+    }
+    <span class="thumb" aria-hidden="true"><img src="/images/bg/bg-@@img.jpg" alt=""></span>
+    @@if(context.list){
+        <div class="services">
+            <p class="tit">서비스 안내</p>
+            <ul>
+                @@for(var i=0; i < list.length; i++){
+                    <li>`+list[i]+`</li>
+                }
+            </ul>
+        </div>
+    }
+</div>

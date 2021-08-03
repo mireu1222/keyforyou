@@ -20,7 +20,330 @@
             })
 
             <div class="contents-area">
-                <img src="/images/img/img-sub0201.jpg" alt="">
+                <div class="point-tab-wraps">
+                    <ul class="tabs" role="tablist" data-toggle="tab">
+                        <li class="active" role="presentation"><button type="button" data-target="#tab01" role="tab" aria-selected="true">법정의무교육</button></li>
+                        <li role="presentation"><button type="button" data-target="#tab02" role="tab" aria-selected="false">직무교육</button></li>
+                        <li role="presentation"><button type="button" data-target="#tab03" role="tab" aria-selected="false">환급절차</button></li>
+                        <li role="presentation"><button type="button" data-target="#tab04" role="tab" aria-selected="false">내일배움카드</button></li>
+                    </ul>
+                </div>
+                <!-- 법정의무교육 -->
+                <div id="tab01" class="tab-pane">
+                    <h4 class="tab-title">법정의무교육</h4>
+                    @@include('./modules/education-lists.html', {
+                        list : [
+                            {
+                                title : '개인정보보호교육',
+                                cont1 : '사업주, 근로자 전 직원(공통)',
+                                cont2 : '1시간(1차시 분량)',
+                                cont3 : '「개인정보 보호법」 <em>과징금 최대 5억원 이하</em>'
+                            }, {
+                                title : '성희롱 예방교육',
+                                cont1 : '사업주, 근로자 전 직원(공통)',
+                                cont2 : '1시간(1차시 분량)',
+                                cont3 : '「양성평등 기본법」 <em>과태료 최대 500만원</em>'
+                            }, {
+                                title : '직장 내 장애인 인식개선 교육',
+                                cont1 : '사업주, 근로자 전 직원(공통)',
+                                cont2 : '1시간(1차시 분량)',
+                                cont3 : '「장애인 복지법」 <em>과태료 최대 300만원</em>'
+                            }, {
+                                title : '안전보건교육',
+                                cont1 : '5인 이상 사업장 사업주, 근로자 전 직원',
+                                cont2 : '사무직, 판매직 : 매 분기당 3시간<br>사무직, 판매직 외 근로자 : 매 분기당 6시간<br>관리감독자 : 연간 16시간',
+                                cont3 : '「산업안전보건법」 <em>과태료 최대 500만원</em>'
+                            }, {
+                                title : '퇴직연금 교육',
+                                cont1 : '사업주, 근로자 전 직원(공통)',
+                                cont2 : '1시간(1차시 분량)',
+                                cont3 : '「근로자퇴직급여 보장법」 <em>과태료 최대 1,000만원</em>'
+                            }
+                        ]
+                    })
+                </div>
+                <!-- // 법정의무교육 -->
+                <!-- 직무교육 -->
+                <div id="tab02" class="tab-pane">
+                    <section>
+                        <div class="tit-wrap">
+                            <h4 class="tab-title">사업주훈련이란?</h4>
+                            <p class="tab-desc">사업주가 소속 근로자를 대상으로 직무수행능력을 습득 향상시키기 위하여 실시하는 훈련으로 실시에 따라 소요되는 훈련비등 비용의 일부를 지원하는 제도.</p>
+                        </div>
+                        <div class="ex-box">
+                            <h5 class="tit">훈련 실시 주체 및 대상</h5>
+                            <ul class="bullet-list dot">
+                                <li>훈련실시주체 : 사업주(고용보험법상 직업능력개발사업의 적용을 받는 사업주)</li>
+                                <li>훈련실시대상 : 15세 이상의 고용보험 가입된 근로자.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="tit-wrap">
+                            <h4 class="tab-title">직무역량강화교육</h4>
+                            <p class="tab-desc">
+                                훈련실시에 따라 소요되는 훈련비 등 80~90%를 환급해 줍니다.<br>
+                                다양한 분야의 직무교육에 대하여 환급과정으로 운영하고 있습니다.
+                            </p>
+                        </div>
+                        <div class="solid-tab-wraps">
+                            <ul class="tabs" role="tablist" data-toggle="tab">
+                                <li class="active" role="presentation"><button type="button" data-target="#cate01" role="tab" aria-selected="true">경영/회계/사무</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate02" role="tab" aria-selected="false">교육/자연/사회과학</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate03" role="tab" aria-selected="false">금융/보험</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate04" role="tab" aria-selected="false">법률/경찰/소방</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate05" role="tab" aria-selected="false">보건/의료</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate06" role="tab" aria-selected="false">사업관리</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate07" role="tab" aria-selected="false">사업복지/종교</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate08" role="tab" aria-selected="false">영업/판매</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate09" role="tab" aria-selected="false">전기/전자</button></li>
+                                <li role="presentation"><button type="button" data-target="#cate10" role="tab" aria-selected="false">정보통신</button></li>
+                            </ul>
+                        </div>
+                        <!-- 경영/회계/사무 -->
+                        <div id="cate01" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '경영/회계/사무 교육 제목이 들어감',
+                                list : 4
+                            })
+                        </div>
+                        <!-- // 경영/회계/사무 -->
+                        <!-- 교육/자연/사회과학 -->
+                        <div id="cate02" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '교육/자연/사회과학 교육 제목이 들어감',
+                                list : 6
+                            })
+                        </div>
+                        <!-- // 교육/자연/사회과학 -->
+                        <!-- 금융/보험 -->
+                        <div id="cate03" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '금융/보험 교육 제목이 들어감',
+                                list : 5
+                            })
+                        </div>
+                        <!-- // 금융/보험 -->
+                        <!-- 법률/경찰/소방 -->
+                        <div id="cate04" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '법률/경찰/소방 교육 제목이 들어감',
+                                list : 2
+                            })
+                        </div>
+                        <!-- // 법률/경찰/소방 -->
+                        <!-- 보건/의료 -->
+                        <div id="cate05" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '보건/의료 교육 제목이 들어감',
+                                list : 3
+                            })
+                        </div>
+                        <!-- 보건/의료 -->
+                        <!-- 사업관리 -->
+                        <div id="cate06" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '사업관리 교육 제목이 들어감',
+                                list : 4
+                            })
+                        </div>
+                        <!-- // 사업관리 -->
+                        <!-- 사업복지/종교 -->
+                        <div id="cate07" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '사업복지/종교 교육 제목이 들어감',
+                                list : 5
+                            })
+                        </div>
+                        <!-- // 사업복지/종교 -->
+                        <!-- 영업/판매 -->
+                        <div id="cate08" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '영업/판매 교육 제목이 들어감',
+                                list : 6
+                            })
+                        </div>
+                        <!-- // 영업/판매 -->
+                        <!-- 전기/전자 -->
+                        <div id="cate09" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '전기/전자 교육 제목이 들어감',
+                                list : 1
+                            })
+                        </div>
+                        <!-- // 전기/전자 -->
+                        <!-- 정보통신 -->
+                        <div id="cate10" class="tab-pane">
+                            @@include('./modules/educard-lists.html', {
+                                title : '정보통신 교육 제목이 들어감',
+                                list : 8
+                            })
+                        </div>
+                        <!-- // 정보통신 -->
+                    </section>
+                </div>
+                <!-- // 직무교육 -->
+                <!-- 환급절차 -->
+                <div id="tab03" class="tab-pane">
+                    <section>
+                        <h4 class="tab-title">환급절차</h4>
+                        @@include('./modules/step-lists.html', {
+                            list : [
+                                {
+                                    tit : '환급절차 1 타이틀이 들어감',
+                                    desc : '환급절차 1 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 2 타이틀이 들어감',
+                                    desc : '환급절차 2 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 3 타이틀이 들어감',
+                                    desc : '환급절차 3 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 4 타이틀이 들어감',
+                                    desc : '환급절차 4 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 5 타이틀이 들어감',
+                                    desc : '환급절차 5 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 6 타이틀이 들어감',
+                                    desc : '환급절차 6 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 7 타이틀이 들어감',
+                                    desc : '환급절차 7 내용이 들어감'
+                                }, {
+                                    tit : '환급절차 8 타이틀이 들어감',
+                                    desc : '환급절차 8 내용이 들어감'
+                                }
+                            ]
+                        })
+                    </section>
+                    <section>
+                        <div class="tit-wrap">
+                            <h4 class="tab-title">고용보험환급과정</h4>
+                            <p class="tab-desc">고용보험 가입 사업주가 인정받은 훈련과정에 대한 훈련비용을 부담하여 재직근로자 등을 대상으로 훈련을 실시한 경우 소정의 훈련비용을 지원합니다.</p>
+                        </div>
+                        <div class="ex-box">
+                            <p class="tit">지원한도 (고용보험법 시행령 제42조)</p>
+                            <div class="dl-wrap">
+                                <dl>
+                                    <dt>가. 개념</dt>
+                                    <dd>고용보험 재정의 건전성 및 사업주 훈련 실시의 적정성 확보를 위하여 연간 사업주가 받을 수 있는 직업능력개발 훈련비용의 총액을 제한</dd>
+                                </dl>
+                                <dl>
+                                    <dt>나. 지원 한도 금액(고용보험법 시행령 제42조 제3항 및 사업주훈련 규정 제22조)</dt>
+                                    <dd>사업주가 「보험료징수법」에 따라 해당 연도에 내야 할 고용안정 · 직업능력개발 사업의 개산 보험료 및 특례보험료의 100분의 100-우선지원대상기업의 경우에는 100분의 240에 해당하는 금액</dd>
+                                    <dd>비용지원 한도 최소금액(500만원)에 미달하는 경우에는 500만원까지 지원</dd>
+                                    <dd>다만, 「고용보험법」제35조에 따라 지원 · 융자 제한의 행정처분을 받은 사업주에 대해서는 그 처분의 효력이 끝나는 보험연도부터 3년간 비용지원한도 최소 금액은 개산 보험료의 240%에 해당하는 금액</dd>
+                                </dl>
+                                <dl>
+                                    <dt>다. 지원 한도 기준</dt>
+                                    <dd>다만, 「고용보험법」제35조에 따라 지원 · 융자 제한의 행정처분을 받은 사업주에 대해서는 그 처분의 효력이 끝나는 보험연도부터 3년간 비용지원한도 최소 금액은 개산 보험료의 240%에 해당하는 금액</dd>
+                                    <dd>다만, 해당 연도 중에 개산보험료에 대하여 증가 또는 감액신청을 하여 납부 또는 감액 조정통지를 받은 경우에는 동 개산보험료 및 사업규모를 기준으로 훈련비용 지원이 변경될 수 있음<br>훈련실시 기간이 2개 년도에 거쳐 실시되는 경우에는 훈련이 실시된 해당 연도의 지원한도 내에서만 비용지원 가능</dd>
+                                </dl>
+                                <dl>
+                                    <dt>라. 비용지원 한도의 예외(「고용보험법 시행령」 제42조 제2항, 제4항)</dt>
+                                    <dd>다른 사업에 고용된 근로자를 대상으로 훈련과정을 인정받아 훈련을 실시할 경우 고용안정 · 직업능력개발사업의 개산보험료의 80%까지 추가 지원<br>양성훈련 지원금 및 유급휴가훈련의 임금의 일부는 지원한도적용에서 제외</dd>
+                                </dl>
+                            </div>
+                            <div class="ci-box">
+                                <img src="/images/img/img-ci.png" alt="한국산업인력공단 ci">
+                            </div>
+                        </div>
+                        <div class="ex-box">
+                            <p class="tit">비용지원신청서 구비서류</p>
+                            <ul class="bullet-list dot">
+                                <li>지원금 신청일 : 훈련종료 후 또는 매 3개월 간의 훈련실시 후 30일 이내</li>
+                                <li>훈련비용 신청 소멸시효는 훈련종료일로부터 3년</li>
+                            </ul>
+                        </div>
+                        <div class="ex-box">
+                            <p class="tit">신청방법</p>
+                            <p class="desc">온라인(HRD-Net)으로 신청 또는 오프라인(방문, 우편, 팩스 등) 서류 제출</p>
+                            <ul class="bullet-list dot">
+                                <li>온라인 신청 시 지원금 별 증빙서류 스캔 첨부</li>
+                                <li>오프라인 신청 시 훈련비용지원신청서와 수료자명단, 지원금 별 증빙서류제</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <!-- // 환급절차 -->
+                <!-- 내일배움카드 -->
+                <div id="tab04" class="tab-pane">
+                    <section>
+                        <div class="tit-wrap type2">
+                            <h4 class="tab-title">국민내일배움카드가 무엇인가요?</h4>
+                            <p class="tab-desc">정부에서 개인에게 교육비를 지원해주는 유익한 제도로 재직, 구직, 자영업 관계없이 300만원의 훈련비가 우선적으로 지원되며 개인소득수준을 고려하여 최대500만원까지 지원해주는 제도입니다.</p>
+                        </div>
+                        <ul class="bg-lists">
+                            <li>
+                                <p class="tit"><span>150만<br>발급</span></p>
+                                <p class="desc">
+                                    15~19년기준, <em>150만 직장인 발급</em><br>
+                                    -HDR Net 통계기준-
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit"><span>500만원<br>지원</span></p>
+                                <p class="desc">
+                                    <em>최대 500만원 자기계발비 지원</em>으로<br>
+                                    최소 자부담으로 자기계발 가능
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit"><span>수백여개<br>과정</span></p>
+                                <p class="desc">
+                                    직장인 필수스킬은 물론 자격, 영어까지<br>
+                                    <em>수백여개 과정</em> 국민내일배움카드로 가능
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="tit-wrap">
+                            <h4 class="tab-title">카드 발급은 어떻게 하나요?</h4>
+                            <p class="tab-desc">고용보험 가입 사업주가 인정받은 훈련과정에 대한 훈련비용을 부담하여 재직근로자 등을 대상으로 훈련을 실시한 경우 소정의 훈련비용을 지원합니다.</p>
+                        </div>
+                        <div class="ex-box">
+                            <p class="tit">온라인신청</p>
+                            <p class="desc">
+                                정부출연자금(R&D) HRD-Net(grd.go.kr)접속
+                                <span class="fw-bold">로그인  >  MY서비스  >  회원정보관리 실명인증  >  공인인증서등록  >  국민내일배움카드 신청클릭  >  국민내일배움카드 신청서 작성 및 카드 신청</span>
+                            </p>
+                            <p class="alert-txt">※ (현)공동인증서 사전 준비 필수</p>
+                        </div>
+                        <div class="ex-box">
+                            <p class="tit">오프라인 방문 신청</p>
+                            <p class="desc">
+                                신분증과 근로계약서 및 증빙서류 지참
+                                <span class="fw-bold">고용센터 방문  >  근로자카드 신청처 작성 후 발급 상담  >  고용센터에서 지정확인서 수령 후 지정은행 방문하여 즉시 발급 및 해당 카드사 우편 배송</span>
+                            </p>
+                            <p class="alert-txt">※ 자세한 사항은 정부출연자금(R&D) 국민내일배움카드 발급처로 문의 (대표전화 1350)</p>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="tit-wrap">
+                            <h4 class="tab-title">수강신청은 어떻게 하나요?</h4>
+                            <p class="tab-desc">
+                                국민내일배움카드로 수강신청시에는 2번의 수강신청이 필요합니다.<br>
+                                이엘&HRD Net 양쪽 사이트에서 반드시 수강신청이 되어야 최종 신청이 완료되며, 학습은 이엘 사이트(온라인or모바일)에서 진행하시면 됩니다.
+                            </p>
+                        </div>
+                        <div class="border-guide">
+                            <span class="thumb" aria-hidden="true">
+                                <img src="/images/img/img-sub0201.jpg" alt="">
+                            </span>
+                            <div class="cont">
+                                <p class="title">수강신청 가이드</p>
+                                <ol>
+                                    <li>엘에서 원하는 과정 수강신청</li>
+                                    <li>HRD Net에서 동일 과정 검색 후, 수강신청 [인터넷과정포함] 문구 반드시 체크 후 검색</li>
+                                    <li>수강신청 완료 후, 학습시작일에 &lt;이엘&gt;에서 학습시작</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- // 내일배움카드 -->
             </div>
         </div>
         <!-- // contents -->

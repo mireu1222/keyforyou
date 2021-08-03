@@ -1,0 +1,25 @@
+<div class="step-lists-wrap@@if(context.type2){ type2}">
+    @@if(context.type2){
+        <ul class="lists">
+    }
+    @@if(!context.type2){
+        <ol class="lists">
+    }
+        @@for(var i=0; i < list.length; i++){
+            <li>
+                <div class="inner">
+                    <span class="num">0`+[i+1]+`</span>
+                    @@if(!context.type2){
+                        <p class="tit">`+list[i].tit+`</p>
+                    }
+                    <p class="desc">`+list[i].desc+`</p>
+                </div>
+            </li>
+        }
+    @@if(context.type2){
+        </ul>
+    }
+    @@if(!context.type2){
+        </ol>
+    }
+</div>

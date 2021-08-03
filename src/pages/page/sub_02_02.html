@@ -20,7 +20,26 @@
             })
 
             <div class="contents-area">
-                <img src="/images/img/img-sub0202.jpg" alt="">
+                <div class="point-tab-wraps">
+                    <ul class="tabs" role="tablist" data-toggle="tab">
+                        <li class="active" role="presentation"><button type="button" data-target="#tab01" role="tab" aria-selected="true">올패키지</button></li>
+                        <li role="presentation"><button type="button" data-target="#tab02" role="tab" aria-selected="false">교육</button></li>
+                    </ul>
+                </div>
+                <div id="tab01" class="tab-pane">
+                    @@include('./modules/thumb-list.html', {
+                        list : 8
+                    })
+
+                    @@include('./modules/pagination.html')
+                </div>
+                <div id="tab02" class="tab-pane">
+                    @@include('./modules/thumb-list.html', {
+                        list : 6
+                    })
+
+                    @@include('./modules/pagination.html')
+                </div>
             </div>
         </div>
         <!-- // contents -->

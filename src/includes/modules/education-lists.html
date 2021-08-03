@@ -1,0 +1,24 @@
+<ul class="education-lists">
+    @@for(var i=0; i < list.length; i++){
+        <li>
+            <div class="inner">
+                <span class="thumb"><img src="/images/img/img-sub0201-`+[i+1]+`.jpg" alt=""></span>
+                <p class="title">`+list[i].title+`</p>
+                <ul class="cont-lists">
+                    <li>
+                        <p class="tit">1. 교육대상</p>
+                        <p class="desc">`+list[i].cont1+`</p>
+                    </li>
+                    <li>
+                        <p class="tit">2. 교육시간</p>
+                        <p class="desc">`+list[i].cont2+`</p>
+                    </li>
+                    <li>
+                        <p class="tit">3. 처벌</p>
+                        <p class="desc">`+list[i].cont3+`</p>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    }
+</ul>

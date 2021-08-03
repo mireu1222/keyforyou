@@ -5,13 +5,16 @@ $cont :         #666 !default;
 $gray :         #888 !default;
 $placeholder :  #999 !default;
 $border :       #ddd !default;
+$border2 :      #e3ddd9 !default;
 $point :        #89593e !default;
 $point2 :       #22140c !default;
-$blur :         #eee !default;
+$bg :           #f4f2f0 !default;
+$blur :         #afa8a4 !default;
 $white :        #fff !default;
 $disabled :     #f5f5f5 !default;
 $red :          #ff2d04 !default;
-$yellow :       #dea82a !default;
+$yellow :       #e1b016 !default;
+$green :        #6c893e !default;
 
 $colors : (
     "black" $black "dark",
@@ -21,10 +24,11 @@ $colors : (
     "border" $border "bright",
     "point" $point "dark", 
     "point2" $point2 "dark", 
-    "blur" $blur "bright",
+    "blur" $blur "dark",
     "white" $white "bright",
     "red" $red "dark",
     "yellow" $yellow "dark",
+    "green" $green "dark",
 ) !default;
 $color-maps : (
     "black" :   $black,
